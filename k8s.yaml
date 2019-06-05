@@ -9,6 +9,10 @@ spec:
       labels:
         app: jenkins-demo
     spec:
+      hostAliases:
+      - ip: "192.168.0.14"
+        hostnames:
+        - "core-harbor.galaxymx.com"
       containers:
       - image: cnych/jenkins-demo:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
